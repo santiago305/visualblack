@@ -1,0 +1,7 @@
+:root {
+  --font-sans: "Segoe UI", "Helvetica Neue", sans-serif;
+  --color-text: #e2e8f0;
+  --color-muted: #94a3b8;
+  --color-border: rgba(148, 163, 184, 0.2);
+  --color-accent: #f59e0b;
+}

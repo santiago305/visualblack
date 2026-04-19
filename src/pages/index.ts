@@ -1,0 +1,7 @@
+export * from './AboutPage'
+export * from './ContactPage'
+export * from './HomePage'
+export * from './NotFoundPage'
+export * from './PortfolioDetailPage'
+export * from './PortfolioPage'
+export * from './StorageSolutionsPage'
