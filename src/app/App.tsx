@@ -1,12 +1,12 @@
-import { resolveRoute } from '@/routes'
-import { MainLayout } from '@/shared/components/layout/MainLayout'
+import './styles/app.css'
+
+import { AppRoutes } from '@/routes'
+import Layout from '@/shared/components/layout/Layout'
 
 export function App() {
-  const CurrentPage = resolveRoute(window.location.pathname)
-
   return (
-    <MainLayout>
-      <CurrentPage />
-    </MainLayout>
+    <Layout>
+      <AppRoutes />
+    </Layout>
   )
 }

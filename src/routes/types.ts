@@ -1,10 +1,8 @@
-import type { ReactElement } from 'react'
-
-export type PageComponent = () => ReactElement
+import type { ComponentType } from 'react'
 
 export type AppRoute = {
   key: string
   label: string
-  match: (pathname: string) => boolean
-  component: PageComponent
+  path: string
+  component: ComponentType
 }
