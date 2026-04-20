@@ -1,11 +1,16 @@
+import { useParams } from "react-router-dom";
+
+import { projects } from "@/data/projects";
+import { PortfolioDetailContent } from "@/features/portfolio";
+import { NotFoundPage } from "@/pages/NotFoundPage";
+
 export function PortfolioDetailPage() {
-  return (
-    <section className="page-placeholder">
-      <p className="page-placeholder__eyebrow">Page Placeholder</p>
-      <h1 className="page-placeholder__title">Hello, I am the Portfolio Detail page.</h1>
-      <p className="page-placeholder__text">
-        This file is ready to become the reusable template for each individual portfolio item.
-      </p>
-    </section>
-  )
+  const { slug } = useParams<{ slug: string }>();
+  const project = projects.find((item) => item.id === slug);
+
+  if (!project) {
+    return <NotFoundPage />;
+  }
+
+  return <PortfolioDetailContent project={project} />;
 }
