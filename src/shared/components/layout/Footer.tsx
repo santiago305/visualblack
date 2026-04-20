@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { NAV_LINKS, PATHS, SERVICE_LINKS } from "@/routes/paths";
 
 const Footer = () => {
   return (
@@ -6,20 +7,21 @@ const Footer = () => {
       <div className="container-vb py-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div>
-            <Link to="/" className="font-heading text-xl font-bold tracking-tight">
+            <Link to={PATHS.home} className="font-heading text-xl font-bold tracking-tight">
               visual<span className="text-muted-foreground">black</span>
             </Link>
-            <p className="text-sm text-muted-foreground mt-2 max-w-[280px]">
+            <p className="text-sm text-muted-foreground mt-2 max-w-70">
               Marketing digital y desarrollo web. Tu aliado integral para el mundo digital.
             </p>
           </div>
           <div>
             <h4 className="font-heading text-sm font-semibold mb-3">Servicios</h4>
             <div className="flex flex-col gap-1.5">
-              <Link to="/servicios/marketing-digital" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Marketing Digital</Link>
-              <Link to="/servicios/campanas-publicitarias" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Campañas Publicitarias</Link>
-              <Link to="/servicios/gestion-redes" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Gestión de Redes</Link>
-              <Link to="/servicios/desarrollo-web" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Desarrollo Web</Link>
+              {SERVICE_LINKS.map((service) => (
+                <Link key={service.path} to={service.path} className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+                  {service.name}
+                </Link>
+              ))}
             </div>
           </div>
           <div>
@@ -29,9 +31,11 @@ const Footer = () => {
               <span>+1 (555) 000-0000</span>
             </div>
             <div className="flex flex-col gap-1.5 mt-4">
-              <Link to="/portafolio" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Portafolio</Link>
-              <Link to="/nosotros" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Nosotros</Link>
-              <Link to="/contacto" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Contacto</Link>
+              {NAV_LINKS.slice(1).map((link) => (
+                <Link key={link.path} to={link.path} className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+                  {link.name}
+                </Link>
+              ))}
             </div>
           </div>
         </div>
