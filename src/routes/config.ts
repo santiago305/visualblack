@@ -1,4 +1,4 @@
-import { AboutPage, ContactPage, HomePage, NotFoundPage, PortfolioDetailPage, PortfolioPage, StorageSolutionsPage } from '@/pages'
+import { AboutPage, ContactPage, HomePage, NotFoundPage, PortfolioDetailPage, PortfolioPage, ServiceDetailPage } from '@/pages'
 
 import { PATHS } from './paths'
 import type { AppRoute } from './types'
@@ -38,7 +38,7 @@ export const appRoutes: AppRoute[] = [
     key: 'services',
     label: 'Servicios',
     path: PATHS.serviceDetailPattern,
-    component: StorageSolutionsPage,
+    component: ServiceDetailPage,
   },
   {
     key: 'not-found',

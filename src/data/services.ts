@@ -1,92 +1,92 @@
-export interface Service {
-  id: string;
-  title: string;
-  shortDescription: string;
-  description: string;
-  benefits: string[];
-  icon: string;
-  relatedProjects: string[];
-}
+import type { Service } from "@/features/services/types/service.types";
 
 export const services: Service[] = [
   {
-    id: "marketing-digital",
-    title: "Marketing Digital",
-    shortDescription: "Estrategias integrales para posicionar tu marca en el mundo digital.",
-    description: "Diseñamos y ejecutamos estrategias de marketing digital personalizadas que conectan tu marca con tu audiencia ideal. Desde SEO y SEM hasta content marketing y analytics, cubrimos todo el espectro digital para maximizar tu ROI.",
-    benefits: [
-      "Análisis de mercado y competencia",
-      "Estrategia de contenido personalizada",
-      "SEO técnico y on-page",
-      "Google Ads y Meta Ads",
-      "Analytics y reportes mensuales",
-      "Optimización continua de campañas",
-    ],
+    slug: "marketing-digital",
     icon: "📊",
-    relatedProjects: ["campaign-360", "email-automation"],
+    eyebrow: "Solucion 01",
+    title: "Marketing Digital",
+    shortDescription:
+      "Estrategias para posicionar tu marca, atraer clientes y convertir trafico en oportunidades reales.",
+    description:
+      "Disenamos una estrategia digital alineada a tus objetivos comerciales, con foco en visibilidad, captacion y resultados medibles.",
+    deliverables: [
+      "Auditoria inicial y planteamiento estrategico",
+      "Definicion de canales y plan de accion",
+      "Calendario de contenidos y activaciones",
+      "Seguimiento de metricas clave",
+    ],
+    benefits: [
+      "Mayor alcance para tu marca",
+      "Mejor posicionamiento en canales digitales",
+      "Decisiones respaldadas por datos",
+    ],
   },
   {
-    id: "campanas-publicitarias",
-    title: "Campañas Publicitarias",
-    shortDescription: "Campañas de alto impacto que generan resultados medibles.",
-    description: "Creamos campañas publicitarias que capturan la atención y convierten. Utilizamos datos y creatividad para diseñar mensajes que resuenan con tu audiencia en cada punto de contacto.",
-    benefits: [
-      "Planificación estratégica de medios",
-      "Creatividad basada en datos",
-      "A/B testing continuo",
-      "Retargeting inteligente",
-      "Informes de rendimiento en tiempo real",
-      "Optimización de presupuesto",
+    slug: "campanas-publicitarias",
+    icon: "📢",
+    eyebrow: "Solucion 02",
+    title: "Campanas Publicitarias",
+    shortDescription:
+      "Campanas enfocadas en generar trafico, leads y ventas con una ejecucion optimizada.",
+    description:
+      "Creamos, lanzamos y optimizamos campanas pagadas para que tu inversion publicitaria se traduzca en resultados concretos.",
+    deliverables: [
+      "Planeacion de audiencias y objetivos",
+      "Creatividades y copies para anuncios",
+      "Configuracion de campanas y conversiones",
+      "Optimizacion continua del rendimiento",
     ],
-    icon: "🎯",
-    relatedProjects: ["campaign-360", "branding-restaurant"],
+    benefits: [
+      "Mayor retorno de la inversion publicitaria",
+      "Segmentacion mas precisa",
+      "Escalabilidad segun el rendimiento",
+    ],
   },
   {
-    id: "gestion-redes",
-    title: "Gestión de Redes Sociales",
-    shortDescription: "Construimos y gestionamos tu presencia en redes con estrategia.",
-    description: "Gestionamos tus redes sociales con una estrategia clara y contenido de calidad. Desde la planificación editorial hasta la interacción con tu comunidad, nos encargamos de todo para que tu marca brille.",
-    benefits: [
-      "Estrategia de contenido por plataforma",
-      "Calendario editorial",
-      "Creación de contenido visual",
-      "Community management",
-      "Análisis de métricas y crecimiento",
-      "Gestión de crisis y reputación",
-    ],
+    slug: "gestion-redes",
     icon: "📱",
-    relatedProjects: ["social-media-growth"],
+    eyebrow: "Solucion 03",
+    title: "Gestion de Redes Sociales",
+    shortDescription:
+      "Contenido, comunidad y consistencia para fortalecer la presencia de tu marca en redes.",
+    description:
+      "Gestionamos tus redes con una linea visual y editorial clara para construir comunidad, reforzar marca y mantener actividad sostenida.",
+    deliverables: [
+      "Definicion de tono y pilares de contenido",
+      "Calendario editorial mensual",
+      "Publicacion y seguimiento de contenidos",
+      "Reportes de crecimiento e interaccion",
+    ],
+    benefits: [
+      "Presencia digital mas consistente",
+      "Mejor relacion con tu audiencia",
+      "Mayor claridad en el mensaje de marca",
+    ],
   },
   {
-    id: "desarrollo-web",
-    title: "Desarrollo Web",
-    shortDescription: "Sitios y aplicaciones web que combinan diseño y tecnología.",
-    description: "Desarrollamos experiencias web de alto rendimiento que combinan diseño excepcional con tecnología de vanguardia. Desde landing pages hasta plataformas complejas, cada proyecto está optimizado para convertir.",
-    benefits: [
-      "Diseño UI/UX personalizado",
-      "Desarrollo responsive y accesible",
-      "Optimización de rendimiento",
-      "Integración con APIs y servicios",
-      "CMS y paneles de administración",
-      "Soporte y mantenimiento continuo",
-    ],
+    slug: "desarrollo-web",
     icon: "💻",
-    relatedProjects: ["ecommerce-luxe", "fintech-dashboard", "portal-educativo"],
-  },
-  {
-    id: "asesoria",
-    title: "Asesoría Estratégica",
-    shortDescription: "Consultoría experta para optimizar tu presencia digital.",
-    description: "Ofrecemos asesoría especializada para empresas que buscan optimizar su estrategia digital. Analizamos tu situación actual, identificamos oportunidades y trazamos un roadmap claro hacia tus objetivos.",
-    benefits: [
-      "Auditoría digital completa",
-      "Análisis de competencia",
-      "Roadmap estratégico",
-      "KPIs y métricas de éxito",
-      "Capacitación de equipos",
-      "Seguimiento y ajustes trimestrales",
+    eyebrow: "Solucion 04",
+    title: "Desarrollo Web",
+    shortDescription:
+      "Sitios web funcionales, rapidos y alineados con tu marca y tus objetivos comerciales.",
+    description:
+      "Desarrollamos experiencias web pensadas para presentar tu marca con claridad, facilitar la navegacion y apoyar tu proceso comercial.",
+    deliverables: [
+      "Arquitectura y estructura de paginas",
+      "Diseno visual responsive",
+      "Desarrollo y puesta en produccion",
+      "Base preparada para escalar contenido",
     ],
-    icon: "🧠",
-    relatedProjects: ["branding-restaurant", "app-salud"],
+    benefits: [
+      "Mejor presentacion digital de tu negocio",
+      "Experiencia mas clara para el usuario",
+      "Base tecnica ordenada para crecer",
+    ],
   },
 ];
+
+export function getServiceBySlug(slug: string) {
+  return services.find((service) => service.slug === slug);
+}

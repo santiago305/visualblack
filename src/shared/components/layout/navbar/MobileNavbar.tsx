@@ -1,7 +1,9 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
-import { NAV_LINKS, PATHS, SERVICE_LINKS } from "@/routes/paths";
+
+import { services } from "@/data/services";
+import { NAV_LINKS, PATHS } from "@/routes/paths";
 
 type Props = {
   isOpen: boolean;
@@ -12,10 +14,7 @@ const MobileNavbar = ({ isOpen, onClose }: Props) => {
   const [servicesOpen, setServicesOpen] = useState(false);
   const location = useLocation();
 
-  const isServiceActive =
-    location.pathname === PATHS.services ||
-    location.pathname.startsWith(`${PATHS.services}/`) ||
-    SERVICE_LINKS.some((service) => location.pathname === service.path);
+  const isServiceActive = location.pathname.startsWith(`${PATHS.services}/`);
 
   return (
     <AnimatePresence>
@@ -32,9 +31,7 @@ const MobileNavbar = ({ isOpen, onClose }: Props) => {
               to={PATHS.home}
               onClick={onClose}
               className={`text-sm font-medium transition-colors ${
-                location.pathname === PATHS.home
-                  ? "text-foreground"
-                  : "text-muted-foreground"
+                location.pathname === PATHS.home ? "text-foreground" : "text-muted-foreground"
               }`}
             >
               Inicio
@@ -47,7 +44,7 @@ const MobileNavbar = ({ isOpen, onClose }: Props) => {
                 isServiceActive ? "text-foreground" : "text-muted-foreground"
               }`}
             >
-              Soluciones {servicesOpen ? "−" : "+"}
+              Soluciones {servicesOpen ? "-" : "+"}
             </button>
 
             <AnimatePresence initial={false}>
@@ -59,20 +56,22 @@ const MobileNavbar = ({ isOpen, onClose }: Props) => {
                   transition={{ duration: 0.2 }}
                   className="flex flex-col gap-2 pl-3"
                 >
-                  {SERVICE_LINKS.map((service) => (
-                    <Link
-                      key={service.path}
-                      to={service.path}
-                      onClick={onClose}
-                      className={`text-sm transition-colors ${
-                        location.pathname === service.path
-                          ? "text-foreground"
-                          : "text-muted-foreground"
-                      }`}
-                    >
-                      {service.icon} {service.name}
-                    </Link>
-                  ))}
+                  {services.map((service) => {
+                    const servicePath = PATHS.serviceDetail(service.slug);
+
+                    return (
+                      <Link
+                        key={service.slug}
+                        to={servicePath}
+                        onClick={onClose}
+                        className={`text-sm transition-colors ${
+                          location.pathname === servicePath ? "text-foreground" : "text-muted-foreground"
+                        }`}
+                      >
+                        {service.icon} {service.title}
+                      </Link>
+                    );
+                  })}
                 </motion.div>
               )}
             </AnimatePresence>
@@ -83,9 +82,7 @@ const MobileNavbar = ({ isOpen, onClose }: Props) => {
                 to={link.path}
                 onClick={onClose}
                 className={`text-sm font-medium transition-colors ${
-                  location.pathname === link.path
-                    ? "text-foreground"
-                    : "text-muted-foreground"
+                  location.pathname === link.path ? "text-foreground" : "text-muted-foreground"
                 }`}
               >
                 {link.name}

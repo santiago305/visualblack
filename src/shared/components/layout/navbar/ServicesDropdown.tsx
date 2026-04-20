@@ -1,16 +1,15 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
-import { PATHS, SERVICE_LINKS } from "@/routes/paths";
+
+import { services } from "@/data/services";
+import { PATHS } from "@/routes/paths";
 
 const ServicesDropdown = () => {
   const [open, setOpen] = useState(false);
   const location = useLocation();
 
-  const isServiceActive =
-    location.pathname === PATHS.services ||
-    location.pathname.startsWith(`${PATHS.services}/`) ||
-    SERVICE_LINKS.some((service) => location.pathname === service.path);
+  const isServiceActive = location.pathname.startsWith(`${PATHS.services}/`);
 
   return (
     <div
@@ -37,19 +36,20 @@ const ServicesDropdown = () => {
             className="absolute left-1/2 top-full z-50 -translate-x-1/2 pt-2"
           >
             <div className="min-w-55 rounded-md border border-border bg-background py-1 shadow-lg">
-              {SERVICE_LINKS.map((service) => {
-                const active = location.pathname === service.path;
+              {services.map((service) => {
+                const servicePath = PATHS.serviceDetail(service.slug);
+                const active = location.pathname === servicePath;
 
                 return (
                   <Link
-                    key={service.path}
-                    to={service.path}
+                    key={service.slug}
+                    to={servicePath}
                     className={`flex items-center gap-2 px-4 py-2 text-sm transition-colors hover:bg-secondary ${
                       active ? "text-foreground" : "text-muted-foreground"
                     }`}
                   >
                     <span className="text-base leading-none">{service.icon}</span>
-                    <span>{service.name}</span>
+                    <span>{service.title}</span>
                   </Link>
                 );
               })}
