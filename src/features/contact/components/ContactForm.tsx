@@ -1,120 +1,156 @@
 import { useState } from "react";
-import { Send } from "lucide-react";
+import type { ChangeEvent, FormEvent } from "react";
+import { motion } from "framer-motion";
+import { useSearchParams } from "react-router-dom";
 
-type FormValues = {
+import { getServiceBySlug } from "@/data/services";
+
+type ContactFormState = {
   name: string;
   email: string;
   phone: string;
   message: string;
 };
 
-const INITIAL_STATE: FormValues = {
+const initialFormState: ContactFormState = {
   name: "",
   email: "",
   phone: "",
   message: "",
 };
 
-function buildContactMessage({ name, email, phone, message }: FormValues) {
-  return `Hola, mi nombre es ${name}.
-
-Estoy interesado en sus servicios y me gustaría conocer más detalles.
-
-Pueden contactarme al correo ${email} o al número ${phone}.
-
-Les comparto un poco más de información:
-${message || "Me gustaría recibir más información sobre sus servicios."}
-
-Quedo atento a su respuesta.`;
-}
+const WHATSAPP_NUMBER = "51939780945";
 
 export function ContactForm() {
-  const [form, setForm] = useState<FormValues>(INITIAL_STATE);
+  const [searchParams] = useSearchParams();
+  const [formData, setFormData] = useState<ContactFormState>(initialFormState);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    setForm((prev) => ({
-      ...prev,
-      [e.target.name]: e.target.value,
-    }));
-  };
+  const serviceSlug = searchParams.get("service");
+  const selectedService = serviceSlug ? getServiceBySlug(serviceSlug) : undefined;
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
+  const handleChange =
+    (field: keyof ContactFormState) =>
+    (event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+      setFormData((current) => ({
+        ...current,
+        [field]: event.target.value,
+      }));
+    };
 
-    // validación básica
-    if (!form.name || !form.email || !form.phone) {
-      alert("Por favor completa los campos obligatorios.");
-      return;
-    }
+  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    setIsSubmitting(true);
 
-    const message = buildContactMessage(form);
+    const serviceContext = selectedService
+      ? `Vengo interesado en el servicio de ${selectedService.title}.`
+      : "Quiero conocer mas sobre sus servicios.";
 
-    const whatsappUrl = `https://wa.me/51939780945?text=${encodeURIComponent(
-      message
-    )}`;
+    const userMessage =
+      formData.message.trim() ||
+      "Me gustaria recibir mas informacion sobre sus servicios.";
 
-    window.open(whatsappUrl, "_blank");
+    const message = `
+Hola, mi nombre es ${formData.name}.
+
+${serviceContext}
+
+Pueden contactarme al correo ${formData.email} o al numero ${formData.phone}.
+
+Les comparto un poco mas de informacion:
+${userMessage}
+
+Quedo atento a su respuesta.
+    `;
+
+    const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+
+    window.open(whatsappUrl, "_blank", "noopener,noreferrer");
+
+    setFormData(initialFormState);
+    setIsSubmitting(false);
   };
 
   return (
-    <form
+    <motion.form
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
       onSubmit={handleSubmit}
-      className="w-full max-w-xl space-y-4 rounded-xl border border-border bg-background p-6"
+      className="mx-auto w-full max-w-125 space-y-3"
     >
-      <h2 className="font-heading text-2xl font-semibold">
-        Contáctanos
-      </h2>
+      {selectedService && (
+        <div className="rounded-sm border border-border bg-secondary/40 px-3 py-2 text-sm text-muted-foreground">
+          Servicio de interes: <span className="font-medium text-foreground">{selectedService.title}</span>
+        </div>
+      )}
 
-      {/* Nombre */}
-      <input
-        type="text"
-        name="name"
-        placeholder="Tu nombre"
-        value={form.name}
-        onChange={handleChange}
-        className="w-full rounded-md border border-border bg-background px-4 py-2 text-sm outline-none focus:border-foreground"
-      />
+      <div>
+        <label htmlFor="contact-name" className="mb-1 block text-xs font-medium">
+          Nombre
+        </label>
+        <input
+          id="contact-name"
+          type="text"
+          required
+          value={formData.name}
+          onChange={handleChange("name")}
+          className="w-full rounded-sm border border-border bg-background px-3 py-2 text-sm transition-colors focus:border-foreground/40 focus:outline-none"
+          placeholder="Tu nombre"
+        />
+      </div>
 
-      {/* Correo */}
-      <input
-        type="email"
-        name="email"
-        placeholder="Tu correo"
-        value={form.email}
-        onChange={handleChange}
-        className="w-full rounded-md border border-border bg-background px-4 py-2 text-sm outline-none focus:border-foreground"
-      />
+      <div>
+        <label htmlFor="contact-email" className="mb-1 block text-xs font-medium">
+          Correo electronico
+        </label>
+        <input
+          id="contact-email"
+          type="email"
+          required
+          value={formData.email}
+          onChange={handleChange("email")}
+          className="w-full rounded-sm border border-border bg-background px-3 py-2 text-sm transition-colors focus:border-foreground/40 focus:outline-none"
+          placeholder="tu@email.com"
+        />
+      </div>
 
-      {/* Teléfono */}
-      <input
-        type="tel"
-        name="phone"
-        placeholder="Tu teléfono"
-        value={form.phone}
-        onChange={handleChange}
-        className="w-full rounded-md border border-border bg-background px-4 py-2 text-sm outline-none focus:border-foreground"
-      />
+      <div>
+        <label htmlFor="contact-phone" className="mb-1 block text-xs font-medium">
+          Telefono
+        </label>
+        <input
+          id="contact-phone"
+          type="tel"
+          value={formData.phone}
+          onChange={handleChange("phone")}
+          className="w-full rounded-sm border border-border bg-background px-3 py-2 text-sm transition-colors focus:border-foreground/40 focus:outline-none"
+          placeholder="+1 (555) 000-0000"
+        />
+      </div>
 
-      {/* Mensaje */}
-      <textarea
-        name="message"
-        placeholder="Cuéntanos un poco más sobre lo que necesitas (opcional)"
-        value={form.message}
-        onChange={handleChange}
-        rows={4}
-        className="w-full resize-none rounded-md border border-border bg-background px-4 py-2 text-sm outline-none focus:border-foreground"
-      />
+      <div>
+        <label htmlFor="contact-message" className="mb-1 block text-xs font-medium">
+          Mensaje
+        </label>
+        <textarea
+          id="contact-message"
+          required
+          rows={4}
+          value={formData.message}
+          onChange={handleChange("message")}
+          className="w-full resize-none rounded-sm border border-border bg-background px-3 py-2 text-sm transition-colors focus:border-foreground/40 focus:outline-none"
+          placeholder="Cuentanos sobre tu proyecto..."
+        />
+      </div>
 
-      {/* Botón */}
       <button
         type="submit"
-        className="inline-flex w-full items-center justify-center gap-2 rounded-md bg-foreground px-4 py-2 text-sm font-medium text-background transition-opacity hover:opacity-90"
+        disabled={isSubmitting}
+        className="w-full rounded-sm bg-foreground px-4 py-2.5 text-sm font-medium text-background transition-colors hover:bg-foreground/90 disabled:opacity-50"
       >
-        <Send className="h-4 w-4" />
-        Enviar por WhatsApp
+        {isSubmitting ? "Enviando..." : "Enviar mensaje"}
       </button>
-    </form>
+    </motion.form>
   );
 }

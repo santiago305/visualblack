@@ -2,6 +2,7 @@ export const PATHS = {
   home: "/",
   about: "/nosotros",
   contact: "/contacto",
+  contactWithService: (slug: string) => `/contacto?service=${encodeURIComponent(slug)}`,
   portfolio: "/portafolio",
   portfolioDetailPattern: "/portafolio/:slug",
   portfolioDetail: (slug: string) => `/portafolio/${slug}`,

@@ -32,7 +32,7 @@ export function ServiceDetailHero({ service }: Props) {
 
         <div className="mt-8 flex flex-wrap gap-3">
           <Link
-            to={PATHS.contact}
+            to={PATHS.contactWithService(service.slug)}
             className="inline-flex items-center justify-center gap-2 rounded-md bg-foreground px-5 py-3 text-sm font-medium text-background transition-opacity hover:opacity-90"
           >
             Solicitar propuesta

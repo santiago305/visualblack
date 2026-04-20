@@ -72,7 +72,7 @@ export function ServiceDetailSidebar({ service }: Props) {
             una propuesta clara, funcional y alineada a tus objetivos.
           </p>
           <Link
-            to={PATHS.contact}
+            to={PATHS.contactWithService(service.slug)}
             className="mt-6 inline-flex items-center gap-2 rounded-md bg-background px-4 py-2.5 text-sm font-medium text-foreground transition-opacity hover:opacity-90"
           >
             Ir a contacto
