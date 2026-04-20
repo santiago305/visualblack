@@ -71,6 +71,7 @@
 
   body {
     @apply bg-background text-foreground font-body antialiased;
+    margin: 0;
   }
 
   h1,
@@ -87,6 +88,60 @@
   .container-vb {
     @apply mx-auto w-full px-4;
     max-width: 1400px;
+  }
+
+  .scrollbar-stable {
+    scrollbar-gutter: stable both-edges;
+  }
+
+  .scrollbar-thin-modern {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(120, 120, 120, 0.35) transparent;
+  }
+
+  .scrollbar-thin-modern::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .scrollbar-thin-modern::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .scrollbar-thin-modern::-webkit-scrollbar-thumb {
+    border-radius: 9999px;
+    background-color: rgba(120, 120, 120, 0.35);
+  }
+
+  .scrollbar-thin-modern::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(120, 120, 120, 0.5);
+  }
+
+  .layout-scroll {
+    min-height: 0;
+    flex: 1 1 auto;
+    overflow-x: hidden;
+    overflow-y: auto;
+    scrollbar-gutter: stable both-edges;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(120, 120, 120, 0.35) transparent;
+    overscroll-behavior-y: contain;
+  }
+
+  .layout-scroll::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .layout-scroll::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .layout-scroll::-webkit-scrollbar-thumb {
+    border-radius: 9999px;
+    background-color: rgba(120, 120, 120, 0.35);
+  }
+
+  .layout-scroll::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(120, 120, 120, 0.5);
   }
 
   .text-balance {
