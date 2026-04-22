@@ -3,7 +3,7 @@ import {
   AboutMissionVisionSection,
   AboutProcessSection,
   // AboutTeamSection,
-  AboutTimelineSection,
+  // AboutTimelineSection,
   AboutValuesSection,
 } from "@/features/about";
 
