@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
+import logo from "@/assets/logo.svg";
 import { NAV_LINKS, PATHS } from "@/routes/paths";
 import NavbarLink from "./NavbarLink";
 import ServicesDropdown from "./ServicesDropdown";
@@ -20,9 +21,9 @@ const Navbar = () => {
       <div className="container-vb flex h-12 items-center justify-between">
         <Link
           to={PATHS.home}
-          className="font-heading text-xl font-bold tracking-tight"
+          className="inline-block"
         >
-          visual<span className="text-muted-foreground">black</span>
+          <img src={logo} alt="visualblack" className="h-7 w-auto" />
         </Link>
 
         <div className="hidden items-center gap-6 md:flex">
