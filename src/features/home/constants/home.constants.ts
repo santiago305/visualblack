@@ -18,7 +18,7 @@ export const metrics = [
   { value: "120+", label: "Proyectos entregados" },
   { value: "85", label: "Clientes satisfechos" },
   { value: "98%", label: "Tasa de retencion" },
-  { value: "5+", label: "Anos de experiencia" },
+  { value: "5+", label: "Años de experiencia" },
 ] as const;
 
 export const servicePreview = previewOrder
