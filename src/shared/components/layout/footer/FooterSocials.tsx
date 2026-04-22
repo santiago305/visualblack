@@ -1,9 +1,9 @@
 import {
   FaFacebookF,
   FaInstagram,
-  FaLinkedinIn,
-  FaTiktok,
-  FaXTwitter,
+  // FaLinkedinIn,
+  // FaTiktok,
+  // FaXTwitter,
 } from "react-icons/fa6";
 
 type SocialItem = {
@@ -14,30 +14,30 @@ type SocialItem = {
 
 const socials: SocialItem[] = [
   {
-    name: "X",
-    href: "https://x.com/",
-    icon: <FaXTwitter />,
-  },
-  {
-    name: "LinkedIn",
-    href: "https://www.linkedin.com/",
-    icon: <FaLinkedinIn />,
-  },
-  {
     name: "Facebook",
-    href: "https://www.facebook.com/",
+    href: "https://www.facebook.com/visualblack01",
     icon: <FaFacebookF />,
   },
   {
     name: "Instagram",
-    href: "https://www.instagram.com/",
+    href: "https://www.instagram.com/visualblack01/",
     icon: <FaInstagram />,
   },
-  {
-    name: "TikTok",
-    href: "https://www.tiktok.com/",
-    icon: <FaTiktok />,
-  },
+  // {
+  //   name: "X",
+  //   href: "https://x.com/",
+  //   icon: <FaXTwitter />,
+  // },
+  // {
+  //   name: "LinkedIn",
+  //   href: "https://www.linkedin.com/",
+  //   icon: <FaLinkedinIn />,
+  // },
+  // {
+  //   name: "TikTok",
+  //   href: "https://www.tiktok.com/",
+  //   icon: <FaTiktok />,
+  // },
 ];
 
 const FooterSocials = () => {
