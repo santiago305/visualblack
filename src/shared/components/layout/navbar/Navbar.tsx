@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
-import logo from "@/assets/logo.svg";
 import { NAV_LINKS, PATHS } from "@/routes/paths";
 import NavbarLink from "./NavbarLink";
 import ServicesDropdown from "./ServicesDropdown";
@@ -23,7 +22,7 @@ const Navbar = () => {
           to={PATHS.home}
           className="inline-block"
         >
-          <img src={logo} alt="visualblack" className="h-7 w-auto" />
+          <img src="/logo.svg" alt="visualblack" className="h-7 w-auto" />
         </Link>
 
         <div className="hidden items-center gap-6 md:flex">

@@ -65,7 +65,7 @@ export function HeroSection() {
             className="text-xs uppercase tracking-[0.3em] text-muted-foreground"
             style={{ writingMode: "vertical-rl" }}
           >
-            Marketing · Desarrollo · Estrategia
+            Marketing / Desarrollo / Estrategia
           </p>
         </motion.div>
       </div>

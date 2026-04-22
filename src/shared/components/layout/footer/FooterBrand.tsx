@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import { PATHS } from "@/routes/paths";
-import logo from "@/assets/logo.svg";
 
 const FooterBrand = () => {
   return (
@@ -9,7 +8,7 @@ const FooterBrand = () => {
         to={PATHS.home}
         className="inline-block"
       >
-        <img src={logo} alt="visualblack" className="h-8 w-auto" />
+        <img src="/logo.svg" alt="visualblack" className="h-8 w-auto" />
       </Link>
 
       <p className="max-w-70 text-sm leading-relaxed text-muted-foreground">

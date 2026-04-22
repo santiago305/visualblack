@@ -48,7 +48,6 @@ const ServicesDropdown = () => {
                       active ? "text-foreground" : "text-muted-foreground"
                     }`}
                   >
-                    <span className="text-base leading-none">{service.icon}</span>
                     <span>{service.title}</span>
                   </Link>
                 );

@@ -6,7 +6,7 @@ export function AboutIntroSection() {
   return (
     <section className="py-16">
       <div className="container-vb">
-        <SectionHeading label="Nosotros" title="Quienes somos" />
+        <SectionHeading label="Nosotros" title="Quienes somos" level="h1" />
 
         <motion.div
           initial={{ opacity: 0, y: 15 }}

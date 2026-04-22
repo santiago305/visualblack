@@ -10,10 +10,10 @@ const FooterContact = () => {
 
         <div className="flex flex-col gap-2 text-sm text-muted-foreground">
           <a
-            href="mailto:info@visualblack.com"
+            href="mailto:info@visualblack.es"
             className="transition-colors hover:text-foreground"
           >
-            info@visualblack.com
+            info@visualblack.es
           </a>
 
           <a

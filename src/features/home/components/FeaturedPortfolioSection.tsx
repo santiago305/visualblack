@@ -28,7 +28,7 @@ export function FeaturedPortfolioSection() {
             to={PATHS.portfolio}
             className="inline-flex items-center text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
           >
-            Ver todos los proyectos ->
+            Ver todos los proyectos {"->"}
           </Link>
         </div>
       </div>

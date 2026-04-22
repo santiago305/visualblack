@@ -68,7 +68,7 @@ const MobileNavbar = ({ isOpen, onClose }: Props) => {
                           location.pathname === servicePath ? "text-foreground" : "text-muted-foreground"
                         }`}
                       >
-                        {service.icon} {service.title}
+                        {service.title}
                       </Link>
                     );
                   })}

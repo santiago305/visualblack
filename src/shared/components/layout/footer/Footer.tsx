@@ -28,7 +28,7 @@ const Footer = () => {
 
         <div className="mt-8 border-t border-border pt-4 text-center">
           <p className="text-xs text-muted-foreground">
-            © {new Date().getFullYear()} visualblack. Todos los derechos reservados.
+            Copyright {new Date().getFullYear()} visualblack. Todos los derechos reservados.
           </p>
         </div>
       </div>

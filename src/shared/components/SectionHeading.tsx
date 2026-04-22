@@ -5,9 +5,18 @@ interface SectionHeadingProps {
   title: string;
   description?: string;
   align?: "left" | "center";
+  level?: "h1" | "h2" | "h3";
 }
 
-const SectionHeading = ({ label, title, description, align = "center" }: SectionHeadingProps) => {
+const SectionHeading = ({
+  label,
+  title,
+  description,
+  align = "center",
+  level = "h2",
+}: SectionHeadingProps) => {
+  const HeadingTag = level;
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 15 }}
@@ -21,7 +30,9 @@ const SectionHeading = ({ label, title, description, align = "center" }: Section
           {label}
         </span>
       )}
-      <h2 className="font-heading text-3xl md:text-4xl font-bold mt-1">{title}</h2>
+      <HeadingTag className="mt-1 font-heading text-3xl font-bold md:text-4xl">
+        {title}
+      </HeadingTag>
       {description && (
         <p className="text-sm text-muted-foreground mt-2 max-w-125 mx-auto">
           {description}
