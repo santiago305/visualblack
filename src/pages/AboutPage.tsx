@@ -12,7 +12,7 @@ export function AboutPage() {
     <>
       <AboutIntroSection />
       <AboutMissionVisionSection />
-      <AboutTimelineSection />
+      {/* <AboutTimelineSection /> */}
       <AboutValuesSection />
       <AboutProcessSection />
       {/* <AboutTeamSection /> */}

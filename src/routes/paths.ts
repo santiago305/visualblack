@@ -13,7 +13,7 @@ export const PATHS = {
 
 export const NAV_LINKS = [
   { name: "Inicio", path: PATHS.home },
-  { name: "Portafolio", path: PATHS.portfolio },
+  // { name: "Portafolio", path: PATHS.portfolio },
   { name: "Nosotros", path: PATHS.about },
   { name: "Contacto", path: PATHS.contact },
 ] as const;

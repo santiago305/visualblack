@@ -46,12 +46,12 @@ export function HeroSection() {
             >
               Iniciar proyecto
             </Link>
-            <Link
+            {/* <Link
               to={PATHS.portfolio}
               className="inline-flex items-center rounded-sm border border-border px-4 py-2 text-sm font-medium transition-colors hover:bg-secondary"
             >
               Ver portafolio
-            </Link>
+            </Link> */}
           </div>
         </motion.div>
 

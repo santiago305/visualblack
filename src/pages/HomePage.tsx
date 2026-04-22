@@ -1,5 +1,4 @@
 import {
-  FeaturedPortfolioSection,
   HeroSection,
   MetricsSection,
   ServicesPreviewSection,
@@ -10,7 +9,7 @@ export function HomePage() {
     <>
       <HeroSection />
       <MetricsSection />
-      <FeaturedPortfolioSection />
+      {/* <FeaturedPortfolioSection /> */}
       <ServicesPreviewSection />
     </>
   );
