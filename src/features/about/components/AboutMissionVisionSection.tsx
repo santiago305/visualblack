@@ -12,7 +12,7 @@ export function AboutMissionVisionSection() {
             transition={{ duration: 0.5 }}
             className="rounded-sm border border-border bg-background p-5"
           >
-            <h3 className="font-heading text-lg font-semibold">Vision</h3>
+            <h3 className="font-heading text-lg font-semibold">Visión</h3>
             <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
               Ser la agencia de referencia en Latinoamerica para empresas que
               buscan una transformacion digital integral, combinando
@@ -27,7 +27,7 @@ export function AboutMissionVisionSection() {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="rounded-sm border border-border bg-background p-5"
           >
-            <h3 className="font-heading text-lg font-semibold">Mision</h3>
+            <h3 className="font-heading text-lg font-semibold">Misión</h3>
             <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
               Potenciar la presencia digital de nuestros clientes a traves de
               soluciones innovadoras que generan valor real y resultados

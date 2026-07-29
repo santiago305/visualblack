@@ -5,13 +5,13 @@ import { buildMetadata } from "./metadata";
 export const homePageSeo = buildMetadata({
   title: "Marketing digital y desarrollo web",
   description:
-    "Visualblack crea estrategias digitales, campañas publicitarias, gestion de redes y desarrollo web para marcas que quieren crecer con claridad.",
+    "Visualblack crea estrategias digitales, campañas publicitarias, gestión de redes y desarrollo web para marcas que quieren crecer con claridad.",
   keywords: [
     "marketing digital colombia",
     "desarrollo web colombia",
     "agencia digital",
     "campañas publicitarias",
-    "gestion de redes sociales",
+    "gestión de redes sociales",
     "visualblack",
   ],
   path: PATHS.home,

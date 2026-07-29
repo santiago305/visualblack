@@ -7,7 +7,7 @@ export const services: Service[] = [
     shortDescription:
       "Impulsamos tu marca con una estrategia digital clara, pensada para atraer clientes y convertir atencion en oportunidades reales.",
     description:
-      "Disenamos una estrategia digital alineada a tus objetivos comerciales para mejorar tu visibilidad, fortalecer tu presencia online y transformar el trafico en resultados medibles.",
+      "Diseñamos una estrategia digital alineada a tus objetivos comerciales para mejorar tu visibilidad, fortalecer tu presencia online y transformar el trafico en resultados medibles.",
     highlight:
       "Una estrategia bien ejecutada no solo te hace ver mejor, tambien te ayuda a vender con mas claridad y consistencia.",
     image:
@@ -15,7 +15,7 @@ export const services: Service[] = [
     deliverables: [
       "Diagnostico inicial de marca y presencia digital",
       "Estrategia de comunicacion y posicionamiento",
-      "Plan de accion por canales y objetivos",
+      "Plan de acción por canales y objetivos",
       "Seguimiento de indicadores clave de rendimiento",
     ],
     benefits: [
@@ -33,7 +33,7 @@ export const services: Service[] = [
     slug: "campañas-publicitarias",
     title: "Campañas Publicitarias",
     shortDescription:
-      "Creamos campañas enfocadas en generar trafico, leads y ventas con una ejecucion optimizada y orientada a resultados.",
+      "Creamos campañas enfocadas en generar trafico, leads y ventas con una ejecución optimizada y orientada a resultados.",
     description:
       "Planificamos, lanzamos y optimizamos campañas publicitarias digitales para que tu inversion tenga direccion, control y resultados concretos desde el primer momento.",
     highlight:
@@ -44,7 +44,7 @@ export const services: Service[] = [
       "Definicion de objetivos y segmentacion de audiencias",
       "Creatividades y copies para anuncios",
       "Configuracion de campañas y eventos de conversion",
-      "Optimizacion continua segun rendimiento",
+      "Optimización continua segun rendimiento",
     ],
     benefits: [
       "Mayor retorno sobre la inversion publicitaria",
@@ -58,8 +58,8 @@ export const services: Service[] = [
     ],
   },
   {
-    slug: "gestion-redes",
-    title: "Gestion de Redes Sociales",
+    slug: "gestión-redes",
+    title: "Gestión de Redes Sociales",
     shortDescription:
       "Construimos una presencia digital constante y coherente para que tu marca conecte, destaque y permanezca activa.",
     description:
@@ -89,7 +89,7 @@ export const services: Service[] = [
     slug: "desarrollo-web",
     title: "Desarrollo Web",
     shortDescription:
-      "Disenamos y desarrollamos sitios web modernos, rapidos y pensados para presentar tu marca con impacto y claridad.",
+      "Diseñamos y desarrollamos sitios web modernos, rápidos y pensados para presentar tu marca con impacto y claridad.",
     description:
       "Creamos experiencias web alineadas a tu identidad y a tus objetivos comerciales, priorizando estructura, diseño, velocidad y una navegacion que acompane mejor la decision del cliente.",
     highlight:

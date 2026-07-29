@@ -13,7 +13,7 @@ export function AboutIntroSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="mx-auto max-w-[800px]"
+          className="mx-auto max-w-200"
         >
           <p className="text-sm leading-relaxed text-muted-foreground">
             <strong className="text-foreground">visualblack</strong> es una
@@ -23,7 +23,7 @@ export function AboutIntroSection() {
             resultados reales, medibles y sostenibles.
           </p>
           <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-            Desde nuestra fundacion, hemos ayudado a mas de 85 empresas a
+            Desde nuestra fundación, hemos ayudado a mas de 85 empresas a
             transformar su estrategia digital, desde el posicionamiento de marca
             hasta el desarrollo de plataformas web de alto rendimiento. Nuestro
             enfoque se basa en entender profundamente cada negocio para disenar

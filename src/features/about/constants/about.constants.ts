@@ -1,6 +1,6 @@
 export const values = [
   {
-    title: "Innovacion",
+    title: "Innovación",
     desc: "Exploramos constantemente nuevas tecnologias y metodologias.",
   },
   {
@@ -55,8 +55,8 @@ export const team = [
 export const timeline = [
   {
     year: "2020",
-    title: "Fundacion",
-    desc: "Nace visualblack con la vision de transformar la presencia digital de las empresas en Latinoamerica.",
+    title: "Fundación",
+    desc: "Nace visualblack con la visión de transformar la presencia digital de las empresas en Latinoamerica.",
   },
   {
     year: "2021",
@@ -84,16 +84,16 @@ export const processSteps = [
   {
     step: "02",
     title: "Estrategia",
-    desc: "Disenamos un plan personalizado con objetivos claros y metricas de exito.",
+    desc: "Diseñamos un plan personalizado con objetivos claros y metricas de exito.",
   },
   {
     step: "03",
-    title: "Ejecucion",
-    desc: "Implementamos cada accion con precision, calidad y tiempos definidos.",
+    title: "Ejecución",
+    desc: "Implementamos cada acción con precision, calidad y tiempos definidos.",
   },
   {
     step: "04",
-    title: "Optimizacion",
+    title: "Optimización",
     desc: "Medimos resultados y ajustamos continuamente para maximizar el impacto.",
   },
 ] as const;

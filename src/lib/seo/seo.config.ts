@@ -4,12 +4,12 @@ export const SEO_CONFIG = {
   locale: "es_CO",
   defaultTitle: "Agencia digital y desarrollo web en Colombia",
   defaultDescription:
-    "Visualblack impulsa marcas con marketing digital, campañas publicitarias, gestion de redes sociales y desarrollo web enfocado en resultados.",
+    "Visualblack impulsa marcas con marketing digital, campañas publicitarias, gestión de redes sociales y desarrollo web enfocado en resultados.",
   defaultKeywords: [
     "agencia digital colombia",
     "marketing digital colombia",
     "desarrollo web colombia",
-    "gestion de redes sociales",
+    "gestión de redes sociales",
     "campañas publicitarias",
     "visualblack",
   ],
