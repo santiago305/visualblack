@@ -5,20 +5,20 @@ import { PATHS } from "@/routes/paths";
 const serviceIcons: Record<string, string> = {
   "marketing-digital": "01",
   "desarrollo-web": "02",
-  "campanas-publicitarias": "03",
+  "campañas-publicitarias": "03",
 };
 
 const previewOrder = [
   "marketing-digital",
   "desarrollo-web",
-  "campanas-publicitarias",
+  "campañas-publicitarias",
 ] as const;
 
 export const metrics = [
   { value: "120+", label: "Proyectos entregados" },
   { value: "85", label: "Clientes satisfechos" },
-  { value: "98%", label: "Tasa de retencion" },
-  { value: "5+", label: "Anios de experiencia" },
+  { value: "98%", label: "Tasa de retención" },
+  { value: "5+", label: "Años de experiencia" },
 ] as const;
 
 export const servicePreview = previewOrder

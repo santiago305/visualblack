@@ -30,12 +30,12 @@ export const services: Service[] = [
     ],
   },
   {
-    slug: "campanas-publicitarias",
-    title: "Campanas Publicitarias",
+    slug: "campañas-publicitarias",
+    title: "Campañas Publicitarias",
     shortDescription:
-      "Creamos campanas enfocadas en generar trafico, leads y ventas con una ejecucion optimizada y orientada a resultados.",
+      "Creamos campañas enfocadas en generar trafico, leads y ventas con una ejecucion optimizada y orientada a resultados.",
     description:
-      "Planificamos, lanzamos y optimizamos campanas publicitarias digitales para que tu inversion tenga direccion, control y resultados concretos desde el primer momento.",
+      "Planificamos, lanzamos y optimizamos campañas publicitarias digitales para que tu inversion tenga direccion, control y resultados concretos desde el primer momento.",
     highlight:
       "No se trata solo de anunciar, sino de invertir mejor para llegar a las personas correctas en el momento correcto.",
     image:
@@ -43,7 +43,7 @@ export const services: Service[] = [
     deliverables: [
       "Definicion de objetivos y segmentacion de audiencias",
       "Creatividades y copies para anuncios",
-      "Configuracion de campanas y eventos de conversion",
+      "Configuracion de campañas y eventos de conversion",
       "Optimizacion continua segun rendimiento",
     ],
     benefits: [
@@ -54,7 +54,7 @@ export const services: Service[] = [
     idealFor: [
       "Negocios que quieren captar clientes mas rapido",
       "Marcas que ya invierten en pauta y quieren mejorar",
-      "Empresas que buscan campanas con enfoque comercial",
+      "Empresas que buscan campañas con enfoque comercial",
     ],
   },
   {
@@ -71,7 +71,7 @@ export const services: Service[] = [
     deliverables: [
       "Definicion de tono, estilo y pilares de contenido",
       "Calendario editorial y planificacion mensual",
-      "Diseno, publicacion y monitoreo de contenidos",
+      "Diseño, publicacion y monitoreo de contenidos",
       "Reporte de crecimiento, alcance e interaccion",
     ],
     benefits: [
@@ -91,14 +91,14 @@ export const services: Service[] = [
     shortDescription:
       "Disenamos y desarrollamos sitios web modernos, rapidos y pensados para presentar tu marca con impacto y claridad.",
     description:
-      "Creamos experiencias web alineadas a tu identidad y a tus objetivos comerciales, priorizando estructura, diseno, velocidad y una navegacion que acompane mejor la decision del cliente.",
+      "Creamos experiencias web alineadas a tu identidad y a tus objetivos comerciales, priorizando estructura, diseño, velocidad y una navegacion que acompane mejor la decision del cliente.",
     highlight:
       "Tu sitio web no debe ser solo una vitrina: debe convertirse en una herramienta que inspire confianza y apoye tu crecimiento.",
     image:
       "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1400&q=80",
     deliverables: [
       "Estructura y arquitectura de contenidos",
-      "Diseno visual responsive y alineado a marca",
+      "Diseño visual responsive y alineado a marca",
       "Desarrollo y publicacion del sitio web",
       "Base tecnica preparada para crecer y escalar",
     ],

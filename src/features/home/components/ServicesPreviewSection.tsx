@@ -17,7 +17,7 @@ export function ServicesPreviewSection() {
           <SectionHeading
             label="Soluciones"
             title="Lo que hacemos"
-            description="Ofrecemos soluciones integrales que cubren todo el espectro digital con enfoque estrategico, diseno claro y ejecucion orientada a resultados."
+            description="Ofrecemos soluciones integrales que cubren todo el espectro digital con enfoque estrategico, diseño claro y ejecucion orientada a resultados."
           />
         </div>
 

@@ -71,7 +71,7 @@ export const timeline = [
   {
     year: "2025",
     title: "+120 proyectos",
-    desc: "Superamos los 120 proyectos entregados con un 98% de tasa de retencion de clientes.",
+    desc: "Superamos los 120 proyectos entregados con un 98% de tasa de retención de clientes.",
   },
 ] as const;
 

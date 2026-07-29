@@ -5,12 +5,12 @@ import { buildMetadata } from "./metadata";
 export const homePageSeo = buildMetadata({
   title: "Marketing digital y desarrollo web",
   description:
-    "Visualblack crea estrategias digitales, campanas publicitarias, gestion de redes y desarrollo web para marcas que quieren crecer con claridad.",
+    "Visualblack crea estrategias digitales, campañas publicitarias, gestion de redes y desarrollo web para marcas que quieren crecer con claridad.",
   keywords: [
     "marketing digital colombia",
     "desarrollo web colombia",
     "agencia digital",
-    "campanas publicitarias",
+    "campañas publicitarias",
     "gestion de redes sociales",
     "visualblack",
   ],
@@ -33,7 +33,7 @@ export const aboutPageSeo = buildMetadata({
 export const contactPageSeo = buildMetadata({
   title: "Contacto",
   description:
-    "Habla con visualblack sobre tu proximo proyecto de marketing digital, redes sociales, campanas o desarrollo web.",
+    "Habla con visualblack sobre tu proximo proyecto de marketing digital, redes sociales, campañas o desarrollo web.",
   keywords: [
     "contacto visualblack",
     "agencia digital colombia contacto",
